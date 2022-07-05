@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import { pushToMetaArr } from '../helpers';
 
 export type Route = {
   method: string;
@@ -12,9 +13,10 @@ function MethodDecoratorFactory(method: string) {
     return (target, propertyKey) => {
       const controller = target.constructor;
 
+      /*
       const routes: Route[] = Reflect.hasMetadata('routes', controller)
         ? Reflect.getMetadata('routes', controller)
-        : [];
+        : [];*/
 
       let middleware: Array<string | symbol> = [];
 
@@ -25,14 +27,26 @@ function MethodDecoratorFactory(method: string) {
         middleware.concat(Reflect.getMetadata('middleware', target));
       }
 
+      pushToMetaArr(
+        'routes',
+        {
+          method,
+          path,
+          middleware,
+          handler: propertyKey,
+        },
+        controller
+      );
+
+      /*
       routes.push({
         method,
         path,
         middleware,
         handler: propertyKey,
       });
-
-      Reflect.defineMetadata('routes', routes, controller);
+*/
+      // Reflect.defineMetadata('routes', routes, controller);
     };
   };
 }
