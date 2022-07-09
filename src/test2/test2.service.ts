@@ -1,13 +1,8 @@
 import { Injectable } from '../lib/decorators/injectable.decorator';
 
 @Injectable()
-export class TestService {
+export class Test2Service {
   constructor() {
     console.log('TEST SERVICE INITED');
-  }
-
-  m() {
-    console.log('TESTSERVICE METHOD');
-    return 'FIRST';
   }
 }

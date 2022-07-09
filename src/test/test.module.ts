@@ -4,9 +4,10 @@ import { TestService } from './test.service';
 import { Module } from '../lib/decorators/module.decorator';
 import { SecondService } from './second.service';
 import { ThirdService } from './third.service';
+import { DepService } from './dep.service';
 
 @Module({
   controllers: [TestController],
-  services: [TestService, SecondService, ThirdService],
+  services: [TestService, SecondService, ThirdService, DepService],
 })
 export class TestModule {}
