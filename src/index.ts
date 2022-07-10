@@ -1,7 +1,7 @@
 import { TestModule } from './test/test.module';
 import { Test1Module } from './test1/test1.module';
 import { AppModule } from './app.module';
-import { AppFactory } from './lib/AppFactory';
+import { AppFactory } from './lib/core/AppFactory';
 import 'reflect-metadata';
 import * as http from 'http';
 import * as express from 'express';

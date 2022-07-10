@@ -1,4 +1,4 @@
-import { Injectable } from '../lib/decorators/injectable.decorator';
+import { Injectable } from '../lib/core/decorators';
 
 @Injectable()
 export class SecondService {

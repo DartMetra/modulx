@@ -1,5 +1,4 @@
-import { Inject } from '../lib/decorators/inject.decorator';
-import { Injectable } from '../lib/decorators/injectable.decorator';
+import { Inject, Injectable } from '../lib/core/decorators';
 import { TestService } from './test.service';
 
 @Injectable()
@@ -11,6 +10,11 @@ export class DepService {
   mmm() {
     console.log('DEPENDENT SERVICE METHOD');
     console.log(this.testService.m());
+    console.log(this.t());
     return 'DEPENDERT';
+  }
+
+  t() {
+    return 'TTT';
   }
 }

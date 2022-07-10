@@ -1,8 +1,7 @@
 import * as express from 'express';
 import { Express } from 'express';
-import { Route } from './decorators/methods';
-import { arrSize } from './helpers';
-import { color } from './helpers/logger';
+import { Route } from './decorators';
+import { arrSize, color } from '../helpers';
 
 export class AppFactory {
   private app: Express;

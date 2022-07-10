@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { pushToMetaArr } from '../helpers';
+import { pushToMetaArr } from '../../helpers';
 
 export type Route = {
   method: string;

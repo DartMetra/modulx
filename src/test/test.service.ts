@@ -1,4 +1,4 @@
-import { Injectable } from '../lib/decorators/injectable.decorator';
+import { Injectable } from '../lib/core/decorators';
 
 @Injectable()
 export class TestService {
@@ -7,6 +7,9 @@ export class TestService {
   }
 
   m() {
+    return this.t();
+  }
+  t() {
     console.log('TESTSERVICE METHOD');
     return 'FIRST';
   }

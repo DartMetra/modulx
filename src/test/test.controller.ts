@@ -1,12 +1,9 @@
 import { NextFunction, Request, Response } from 'express';
-import { Inject } from '../lib/decorators/inject.decorator';
-import { ApplyMiddleware } from '../lib/decorators/applyMiddleware.decorator';
-import { Controller } from '../lib/decorators/controller.decorator';
-import { Get } from '../lib/decorators/methods';
 import { TestService } from './test.service';
 import { ThirdService } from './third.service';
 import { SecondService } from './second.service';
 import { DepService } from './dep.service';
+import { ApplyMiddleware, Controller, Get, Inject } from '../lib/core/decorators';
 
 @Controller({ path: '/test' })
 @ApplyMiddleware([])

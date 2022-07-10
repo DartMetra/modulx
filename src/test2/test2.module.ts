@@ -1,6 +1,6 @@
 import { Test2Service } from './test2.service';
 
-import { Module } from '../lib/decorators/module.decorator';
+import { Module } from '../lib/core/decorators';
 
 @Module({
   controllers: [],
